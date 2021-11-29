@@ -13,6 +13,7 @@ const charactersRoutes = require("./routes/character.routes");
 const authRoutes = require("./routes/auth.routes");
 const moviesRoutes = require("./routes/movies.routes");
 const characterMovieRoutes = require("./routes/table.character.movies.routes");
+const genreRoutes = require("./routes/genre.routes");
 
 db.sequelize.sync().then(() => {
   console.log("DB has been created successfully.");
@@ -39,6 +40,7 @@ app.use("/auth", authRoutes);
 app.use("/characters", charactersRoutes);
 app.use("/movies", moviesRoutes);
 app.use("/character_movies", characterMovieRoutes);
+app.use("/genres", genreRoutes);
 
 app.listen(port, () => {
   console.log(`Example app listening on http://localhost:${port}`);
