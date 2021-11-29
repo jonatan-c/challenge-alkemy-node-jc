@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const { auth } = require("../middlewares/auth.middlewares");
-// isUserToken
+const { isIdCharacterinDB } = require("../middlewares/characters.middlewares");
 const {
   getCharacter,
   addCharacter,
@@ -23,10 +23,10 @@ const {
 } = require("../controllers/characters.controller");
 
 router.get("/", getCharacterQuery);
-router.get("/:id", getCharacter); // funciona, no midificar
+router.get("/:id", isIdCharacterinDB, getCharacter); // funciona, no midificar
 router.post("/", upload.single("image_character"), addCharacter);
-router.put("/:id", auth, editCharacter);
-router.delete("/:id", auth, deleteCharacter);
+router.put("/:id", isIdCharacterinDB, editCharacter);
+router.delete("/:id", isIdCharacterinDB, deleteCharacter);
 module.exports = router;
 
 /**
