@@ -1,0 +1,33 @@
+INSERT INTO `challengealkemynode`.`characters` (`id_character`, `name_character`, `age_character`, `weight_character`, `history_character`, `image_character`) VALUES ('1', 'iron man', '35', '300', 'es un personaje de disney que posee una armadura', '1');
+INSERT INTO `challengealkemynode`.`characters` (`id_character`, `name_character`, `age_character`, `weight_character`, `history_character`, `image_character`) VALUES ('2', 'thor', '30', '200', 'personaje de trueno', '1');
+INSERT INTO `challengealkemynode`.`characters` (`id_character`, `name_character`, `age_character`, `weight_character`, `history_character`, `image_character`) VALUES ('3', 'hulk', '50', '500', 'cuando se enoja explota', '1');
+INSERT INTO `challengealkemynode`.`characters` (`id_character`, `name_character`, `age_character`, `weight_character`, `history_character`, `image_character`) VALUES ('4', 'wanda vision', '25', '70', 'tiene poderes magicos', '1');
+INSERT INTO `challengealkemynode`.`characters` (`id_character`, `name_character`, `age_character`, `weight_character`, `history_character`, `image_character`) VALUES ('5', 'capitan america', '500', '150', 'estaba congelado', '1');
+
+
+
+INSERT INTO `challengealkemynode`.`genres` (`id_genre`, `name_genre`, `image_genre`) VALUES ('1', 'terror', '1');
+INSERT INTO `challengealkemynode`.`genres` (`id_genre`, `name_genre`, `image_genre`) VALUES ('2', 'animacion', '2');
+INSERT INTO `challengealkemynode`.`genres` (`id_genre`, `name_genre`, `image_genre`) VALUES ('3', 'dibujos', '1');
+INSERT INTO `challengealkemynode`.`genres` (`id_genre`, `name_genre`, `image_genre`) VALUES ('4', 'aventura', '1');
+INSERT INTO `challengealkemynode`.`genres` (`id_genre`, `name_genre`, `image_genre`) VALUES ('5', 'suspenso', '1');
+
+
+
+INSERT INTO `challengealkemynode`.`moviesorseries` (`id_ms`, `title_ms`, `creation_date_ms`, `qualification_ms`, `image_ms`, `id_genre`) VALUES ('1', 'avengers inicia', '2020', '5', '1', '1');
+INSERT INTO `challengealkemynode`.`moviesorseries` (`id_ms`, `title_ms`, `creation_date_ms`, `qualification_ms`, `image_ms`, `id_genre`) VALUES ('2', 'avenger terror', '2021', '3', '1', '1');
+INSERT INTO `challengealkemynode`.`moviesorseries` (`id_ms`, `title_ms`, `creation_date_ms`, `qualification_ms`, `image_ms`, `id_genre`) VALUES ('3', 'spiderman', '2022', '2', '1', '4');
+INSERT INTO `challengealkemynode`.`moviesorseries` (`id_ms`, `title_ms`, `creation_date_ms`, `qualification_ms`, `image_ms`, `id_genre`) VALUES ('4', 'hulk trilogia', '219', '1', '1', '5');
+INSERT INTO `challengealkemynode`.`moviesorseries` (`id_ms`, `title_ms`, `creation_date_ms`, `qualification_ms`, `image_ms`, `id_genre`) VALUES ('5', 'matrix', '2029', '5', '1', '3');
+
+
+INSERT INTO `challengealkemynode`.`movie_or_serie` (`id_character_movie_serie`, `id_character`, `id_ms`) VALUES ('1', '1', '2');
+INSERT INTO `challengealkemynode`.`movie_or_serie` (`id_character_movie_serie`, `id_character`, `id_ms`) VALUES ('2', '2', '3');
+INSERT INTO `challengealkemynode`.`movie_or_serie` (`id_character_movie_serie`, `id_character`, `id_ms`) VALUES ('3', '1', '3');
+INSERT INTO `challengealkemynode`.`movie_or_serie` (`id_character_movie_serie`, `id_character`, `id_ms`) VALUES ('4', '1', '5');
+INSERT INTO `challengealkemynode`.`movie_or_serie` (`id_character_movie_serie`, `id_character`, `id_ms`) VALUES ('5', '5', '1');
+INSERT INTO `challengealkemynode`.`movie_or_serie` (`id_character_movie_serie`, `id_character`, `id_ms`) VALUES ('6', '3', '4');
+INSERT INTO `challengealkemynode`.`movie_or_serie` (`id_character_movie_serie`, `id_character`, `id_ms`) VALUES ('7', '3', '1');
+INSERT INTO `challengealkemynode`.`movie_or_serie` (`id_character_movie_serie`, `id_character`, `id_ms`) VALUES ('8', '4', '4');
+INSERT INTO `challengealkemynode`.`movie_or_serie` (`id_character_movie_serie`, `id_character`, `id_ms`) VALUES ('9', '1', '1');
+INSERT INTO `challengealkemynode`.`movie_or_serie` (`id_character_movie_serie`, `id_character`, `id_ms`) VALUES ('10', '5', '5');
