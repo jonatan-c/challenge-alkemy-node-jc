@@ -7,7 +7,8 @@ async function getMovie(req, res) {
   const { id } = req.params;
   try {
     const movies2 = await Movies_Series.findOne({
-      include: ["Characters1"],
+      // include: ["Characters1"],
+      include: [{ all: true }],
       where: {
         id_ms: id,
       },
@@ -32,7 +33,7 @@ async function getMovie(req, res) {
             Image: `http://localhost:3090/${imagesDir}`,
             Title: movies2.title_ms,
             Date_Release: movies2.creation_date_ms,
-            Genre: movies2.id_genre,
+            Genre: movies2.Genre.name_genre,
           },
         ],
         Personajes: [
@@ -54,8 +55,8 @@ async function getMovie(req, res) {
 //Query params
 async function getMovieQuery(req, res) {
   const result = await Movies_Series.findAll({
-    // include: [{ all: true }],
-    include: ["Characters1"],
+    include: [{ all: true }],
+    // include: ["Characters1"],
   });
 
   result.map((img) => {
@@ -75,7 +76,7 @@ async function getMovieQuery(req, res) {
           )}`,
           Titulo: item.title_ms,
           Fecha_Estreno: item.creation_date_ms,
-          // Genero: item.Genre.name_genre,
+          Genero: item.Genre.name_genre,
         },
       ],
       Details: [
